@@ -1,0 +1,58 @@
+{
+  "name": "zendev-vitals",
+  "displayName": "ZenDev Vitals",
+  "description": "Live bio-adaptive load in the status bar, and a breathing guardrail before destructive commands.",
+  "version": "0.1.0",
+  "publisher": "zendev",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other"],
+  "keywords": ["presage", "stress", "guardrail", "terminal", "biometrics"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "zendev.runGuarded",
+        "title": "ZenDev: Run a command with the guardrail"
+      },
+      {
+        "command": "zendev.showReading",
+        "title": "ZenDev: Show the current reading"
+      }
+    ],
+    "configuration": {
+      "title": "ZenDev",
+      "properties": {
+        "zendev.guardFile": {
+          "type": "string",
+          "default": "",
+          "description": "Path to the guard state file written by the ZenDev desktop app. Defaults to ~/.zendev/guard.json."
+        },
+        "zendev.threshold": {
+          "type": "number",
+          "default": 0.72,
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Load above which a destructive command needs one full breath first."
+        },
+        "zendev.staleSeconds": {
+          "type": "number",
+          "default": 15,
+          "description": "How long a reading stays valid before the status bar shows ZenDev as idle."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.4.0"
+  }
+}
