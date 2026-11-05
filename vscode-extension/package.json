@@ -3,7 +3,7 @@
   "displayName": "ZenDev Vitals",
   "description": "Live bio-adaptive load in the status bar, and a breathing guardrail before destructive commands.",
   "version": "0.1.0",
-  "publisher": "zendev",
+  "publisher": "Melwin Siril Joel V",
   "license": "MIT",
   "engines": {
     "vscode": "^1.85.0"
