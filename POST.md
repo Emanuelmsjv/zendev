@@ -1,10 +1,7 @@
----
-TODO before publishing:
-- replace REPO_URL with the public GitHub repository
-- replace VIDEO_URL with the demo video
-- check the feature list against the final build
-- tags: presagechallenge, webdev, typescript, opensource
----
+<!--
+Draft for the DEV post. The repository is linked below; add the demo video URL before publishing.
+Tags: presagechallenge, webdev, typescript, opensource
+-->
 
 # I built a workspace that reads my body, then asked it to leave me alone
 
@@ -72,7 +69,7 @@ The face and EDA models were not always downloadable during development, so the 
 ## Try it
 
 ```sh
-git clone REPO_URL
+git clone https://github.com/Emanuelmsjv/zendev
 cd zendev
 npm install
 cp .env.example .env      # add SMARTSPECTRA_API_KEY
